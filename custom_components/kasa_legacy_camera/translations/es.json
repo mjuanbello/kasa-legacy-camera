@@ -1,0 +1,67 @@
+{
+  "title": "Kasa Legacy Camera",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Añadir cámara Kasa antigua",
+        "description": "Conexión local mediante el protocolo LINKIE.",
+        "data": {
+          "host": "Dirección IP",
+          "username": "Usuario Kasa",
+          "password": "Contraseña Kasa"
+        }
+      },
+      "reconfigure": {
+        "title": "Reconfigurar cámara",
+        "description": "Deja la contraseña en blanco para conservar la actual. La conexión y la identidad de la cámara se validan antes de guardar.",
+        "data": {
+          "host": "Dirección IP",
+          "username": "Usuario Kasa",
+          "password": "Contraseña Kasa"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Volver a autenticar la cámara",
+        "description": "La cámara ha rechazado las credenciales Kasa almacenadas. Introduce unas credenciales válidas para restablecer la conexión.",
+        "data": {
+          "username": "Usuario Kasa",
+          "password": "Contraseña Kasa"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "No se puede conectar con la cámara.",
+      "invalid_auth": "Usuario o contraseña Kasa incorrectos.",
+      "wrong_device": "Las credenciales indicadas corresponden a una cámara diferente."
+    },
+    "abort": {
+      "already_configured": "Esta cámara ya está configurada.",
+      "reconfigure_successful": "La configuración de la cámara se ha actualizado correctamente.",
+      "reauth_successful": "Las credenciales Kasa se han actualizado correctamente."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Opciones de la cámara",
+        "description": "Configura la consulta periódica y el comportamiento de la detección de movimiento.",
+        "data": {
+          "poll_interval": "Intervalo de consulta (s)",
+          "motion_hold": "Duración del movimiento (s)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "motion": {
+        "name": "Movimiento"
+      }
+    },
+    "switch": {
+      "camera": {
+        "name": "Cámara"
+      }
+    }
+  }
+}

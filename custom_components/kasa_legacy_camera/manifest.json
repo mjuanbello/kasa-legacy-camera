@@ -1,0 +1,9 @@
+{
+  "domain": "kasa_legacy_camera",
+  "name": "Kasa Legacy Camera",
+  "version": "0.2.0",
+  "config_flow": true,
+  "integration_type": "device",
+  "iot_class": "local_polling",
+  "requirements": []
+}

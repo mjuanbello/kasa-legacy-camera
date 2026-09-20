@@ -1,0 +1,67 @@
+{
+  "title": "Kasa Legacy Camera",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Add legacy Kasa camera",
+        "description": "Local connection using the LINKIE protocol.",
+        "data": {
+          "host": "IP address",
+          "username": "Kasa username",
+          "password": "Kasa password"
+        }
+      },
+      "reconfigure": {
+        "title": "Reconfigure camera",
+        "description": "Leave the password blank to keep the current one. The connection and camera identity are validated before saving.",
+        "data": {
+          "host": "IP address",
+          "username": "Kasa username",
+          "password": "Kasa password"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Reauthenticate camera",
+        "description": "The camera rejected the stored Kasa credentials. Enter valid credentials to restore the connection.",
+        "data": {
+          "username": "Kasa username",
+          "password": "Kasa password"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Cannot connect to the camera.",
+      "invalid_auth": "Invalid Kasa username or password.",
+      "wrong_device": "The specified credentials belong to a different camera."
+    },
+    "abort": {
+      "already_configured": "This camera is already configured.",
+      "reconfigure_successful": "Camera configuration updated successfully.",
+      "reauth_successful": "Kasa credentials updated successfully."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Camera options",
+        "description": "Configure polling and motion detection behaviour.",
+        "data": {
+          "poll_interval": "Polling interval (s)",
+          "motion_hold": "Motion hold time (s)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "motion": {
+        "name": "Motion"
+      }
+    },
+    "switch": {
+      "camera": {
+        "name": "Camera"
+      }
+    }
+  }
+}
