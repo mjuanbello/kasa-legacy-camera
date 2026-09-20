@@ -1,9 +1,14 @@
 {
   "domain": "kasa_legacy_camera",
   "name": "Kasa Legacy Camera",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "config_flow": true,
   "integration_type": "device",
   "iot_class": "local_polling",
+  "documentation": "https://github.com/mjuanbello/kasa-legacy-camera",
+  "issue_tracker": "https://github.com/mjuanbello/kasa-legacy-camera/issues",
+  "codeowners": [
+    "@mjuanbello"
+  ],
   "requirements": []
 }
